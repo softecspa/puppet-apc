@@ -1,0 +1,12 @@
+extension = apc.so
+
+apc.enabled = <% if scope.lookupvar('apc::enabled') == "true" %>1<% else %>0<% end %>
+apc.mmap_file_mask = /tmp/apc.XXXXXX
+apc.write_lock = 1
+apc.rfc1867 = <% if scope.lookupvar('apc::rfc1867') == "true" %>1<% else %>0<% end %>
+apc.shm_size = <%= scope.lookupvar('apc::shm_size') %>
+apc.num_files_hint = <%= scope.lookupvar('apc::num_files_hint') %>
+apc.stat = <% if scope.lookupvar('apc::apc_stat') == "true" %>1<% else %>0<% end %>
+apc.ttl = <%= scope.lookupvar('apc::ttl') %>
+apc.gc_ttl = <%= scope.lookupvar('apc::gc_ttl') %>
+apc.user_ttl = <%= scope.lookupvar('apc::user_ttl') %>
