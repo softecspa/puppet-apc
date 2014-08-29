@@ -33,7 +33,7 @@
 # Felice Pizzurro <felice.pizzurro@softecspa.it>
 #
 class apc (
-    $password       = $::apc_stat_password,
+    $password,
     $apcdocroot     = '',
     $enabled        = 'true',
     $apc_stat       = 'true',
